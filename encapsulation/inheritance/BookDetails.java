@@ -1,6 +1,20 @@
-package com.techment.encapsulation.inheritance;
 
-//Assignment 2
+/* Encapsulation & Inheritance
+a)	Create a class Book which has following members:
+	private int bookNo
+private String title
+private String author
+private float price
+	Provide getter and setter methods for all the instance variables.
+Create a class BookDetails which has the main method. Create an object of the Book class.  Initialize the object by reading inputs for the fields from the user. 
+
+b)	Extend the Book class to create a class EngineeringBook derived from Book with an additional attribute
+		private String category 	
+Provide setter and getter methods for type instance variable.
+Create an object of the EngineeringBook class  and test.
+ */
+
+package com.techment.encapsulation.inheritance;
 import java.util.Scanner;
 
 public class BookDetails {

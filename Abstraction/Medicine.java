@@ -4,8 +4,10 @@ abstract class Medicine {
 	
 	float price;
 	String expiryDate;
+	String name;
 	
-	public void getDetails(float price,String expiryDate) {
+	public void getDetails(float price,String expiryDate ,String name) {
+		System.out.println(""+name);
 		System.out.println("Price :"+price);
 		System.out.println("ExpiryDate :"+expiryDate);
 	}
