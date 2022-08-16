@@ -7,14 +7,14 @@ public class Rectangle implements Polygon{
 	@Override
 	public void calcArea() {
 		float area =length*breadth; 
-		System.out.println("Rectangle Area :"+area);
+		System.out.println("Rectangle of Area :"+area);
 		
 	}
 
 	@Override
 	public void calcPeri() {
 		float perimeter =  2*(length+breadth);
-		System.out.println("Rectangle Perimeter :"+perimeter);
+		System.out.println("Perimeter of rectangle :"+perimeter);
 	}
 	
 }

@@ -1,7 +1,5 @@
 package com.techment.shape;
 
-
-
 public class Square implements Polygon {
 	float side=5;
 
@@ -14,7 +12,7 @@ public class Square implements Polygon {
 	@Override
 	public void calcPeri() {
 		float perimeter = 4 * side;
-		System.out.println("Area Of Perimeter "+perimeter);
+		System.out.println("Perimeter of Square"+perimeter);
 		
 	}
 }

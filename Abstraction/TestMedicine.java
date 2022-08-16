@@ -5,8 +5,7 @@ public class TestMedicine{
 	public static void main(String[] args) {
 		Medicine m[] = new Medicine[5];
 		double i = Math.random()*4;
-		
-		
+	
 		int j = (int)i;
 //		System.out.println(j);
 		
