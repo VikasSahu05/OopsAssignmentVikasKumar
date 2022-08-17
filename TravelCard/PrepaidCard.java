@@ -3,13 +3,14 @@ package com.techment.inheritance.abstraction;
 abstract class PrepaidCard {
 	int CardNo;
 	double availableBalance;
-	double swipeLimit=5;
+	double swipeLimit;
 	
 
-	abstract void swipeCard (double input);
+	public abstract boolean swipeCard (double input);
 	
 	
-	void rechargeCard(double amount) {
-		System.out.println(availableBalance+=amount);
+	public void rechargeCard(double amount) {
+		this.availableBalance+=amount;
+		System.out.println("Reacharge Successfully ! Balance :"+this.availableBalance);
 	} 
 }

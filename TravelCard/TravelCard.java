@@ -4,44 +4,40 @@ import java.util.Scanner;
 
 interface Rewardable{
 	
-	void rewardPoints(double amount);
+	double rewardPoints(double amount);
 }
 
 
 public class TravelCard extends PrepaidCard implements Rewardable {
 
+	double rewardPoints;
+	
 	@Override
-	public void rewardPoints(double INR) {
-		
-		int rewardPoints = 0;
-		
-		if(INR >= 100 &&  INR <= availableBalance) {
-			rewardPoints+=5;
-			System.out.println("Reward Points : "+rewardPoints);
-		}else {
-			System.out.println("Reward Points : "+rewardPoints);
-		}
+	public double rewardPoints(double INR) {
+		return (INR / 100)*5;
 		
 	}
-
+	
 
 	@Override
-	void swipeCard(double swip) {
+	public
+	boolean swipeCard(double swip) {
 		
-			if(swip > availableBalance) {
-				System.out.println("Not enough balance");
-				swipeLimit--;
+			if(swip > this.availableBalance) {
+				return false;
 			}else {
 				
-				availableBalance-=swip;
-				double processingCharge = (availableBalance*5)/100;
-				availableBalance-=processingCharge;
-				System.out.println("Available Balance :"+availableBalance);
-				
-				swipeLimit--;
-				System.out.println("SwipLimit :"+swipeLimit);
+				this.availableBalance-=swip;
+				this.rewardPoints += this.rewardPoints(swip);
+				return true;
 			
-		}
+			}
+	}
+	
+	void cardDetails() {
+		System.out.println("Card No:"+this.CardNo);
+		System.out.println("Available Balance :"+this.availableBalance);
+		System.out.println("Reward Points:"+this.rewardPoints);
 	}
 	
 }
